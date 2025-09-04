@@ -84,9 +84,9 @@ const Rooms: React.FC<RoomsProps> = ({ id }) => {
                 </p>
             </AnimatedElement>
             <AnimatedElement delay={450}>
-                <a href="#" className="inline-block mt-6 bg-secondary text-white px-8 py-3 rounded-md font-body text-sm font-semibold hover:bg-text-secondary transition-colors">
+                 <button className="inline-flex items-center justify-center bg-secondary-light text-white px-8 py-4 rounded-lg font-body text-sm font-semibold hover:bg-secondary hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 shadow-lg border-0 cursor-pointer min-w-[120px] mt-6">
                     Scopri
-                </a>
+                 </button>
             </AnimatedElement>
           </div>
         </div>

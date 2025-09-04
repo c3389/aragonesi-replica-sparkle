@@ -9,9 +9,9 @@ const Location: React.FC = () => {
                         Vieni a trovarci, nel cuore di Ischia.
                     </h2>
                     <div className="mt-8">
-                        <a href="#" className="inline-block bg-secondary text-white px-8 py-3 rounded-md font-body text-sm font-semibold hover:bg-text-secondary transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                        <button className="inline-flex items-center justify-center bg-secondary-light text-white px-8 py-4 rounded-lg font-body text-sm font-semibold hover:bg-secondary hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 shadow-lg border-0 cursor-pointer min-w-[120px]">
                             Scopri
-                        </a>
+                        </button>
                     </div>
                 </div>
                 <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-lg">
