@@ -23,16 +23,26 @@ const Hero: React.FC = () => {
             {/* Background Images Gallery */}
             <div className="absolute inset-0 w-full h-full">
                 {HERO_IMAGES.map((src, index) => (
-                    <OptimizedImage
+                    <div
                         key={src}
-                        src={src}
-                        alt={`Vista del Relais Corte degli Aragonesi ${index + 1}`}
-                        loading="eager"
-                        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${
+                        className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out ${
                             index === currentIndex ? 'opacity-100' : 'opacity-0'
                         }`}
-                    />
+                    >
+                        <img
+                            src={src}
+                            alt={`Vista del Relais Corte degli Aragonesi ${index + 1}`}
+                            loading="eager"
+                            className="w-full h-full object-cover"
+                            onLoad={() => console.log(`Hero image ${index + 1} displayed successfully`)}
+                            onError={() => console.error(`Error loading hero image ${index + 1}: ${src}`)}
+                        />
+                    </div>
                 ))}
+            </div>
+            {/* Debug indicator */}
+            <div className="absolute top-4 right-4 bg-black/50 text-white px-3 py-1 rounded">
+                {currentIndex + 1} / {HERO_IMAGES.length}
             </div>
         </section>
     );
