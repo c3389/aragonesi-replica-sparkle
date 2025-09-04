@@ -1,8 +1,14 @@
 import React from 'react';
 import { GARDEN_IMAGES } from '../constants';
 import AnimatedElement from './AnimatedElement';
+import OptimizedImage from '../src/components/OptimizedImage';
+import { useImagePreloader } from '../src/hooks/useImagePreloader';
 
 const GardenShowcase: React.FC = () => {
+    // Preload garden images for better performance
+    const gardenImages = GARDEN_IMAGES.map(item => item.src);
+    useImagePreloader(gardenImages);
+    
     return (
         <section className="py-20 md:py-28 bg-[#FAF7F1] overflow-hidden">
              <div className="container mx-auto px-6 text-center mb-12">
@@ -27,12 +33,13 @@ const GardenShowcase: React.FC = () => {
                 {GARDEN_IMAGES.map((item, index) => (
                     <AnimatedElement key={item.id} className="w-full md:w-1/3 h-96" delay={index * 150}>
                         <div className="group relative overflow-hidden h-full">
-                            <img 
+                            <OptimizedImage 
                                 src={item.src} 
                                 alt={`Garden space view ${item.id}`}
                                 className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500 ease-in-out"
+                                loading="lazy"
                             />
-                            <div className="absolute inset-0 bg-black/30"></div>
+                            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-300"></div>
                         </div>
                     </AnimatedElement>
                 ))}

@@ -3,6 +3,8 @@ import { Room } from '../types';
 import { ROOMS_DATA } from '../constants';
 import { ArrowLeftIcon, ArrowRightIcon } from './Icons';
 import AnimatedElement from './AnimatedElement';
+import OptimizedImage from '../src/components/OptimizedImage';
+import { useImagePreloader } from '../src/hooks/useImagePreloader';
 
 interface RoomCardProps {
   room: Room;
@@ -11,11 +13,16 @@ interface RoomCardProps {
 const RoomCard: React.FC<RoomCardProps> = ({ room }) => {
   return (
     <div className="flex-shrink-0 w-80 md:w-96 group">
-      <div className="relative overflow-hidden rounded-lg">
-        <img src={room.image} alt={room.title} className="w-full h-[500px] object-cover transform group-hover:scale-105 transition-transform duration-300" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+      <div className="relative overflow-hidden rounded-lg shadow-lg">
+        <OptimizedImage 
+          src={room.image} 
+          alt={room.title} 
+          className="w-full h-[500px] object-cover transform group-hover:scale-105 transition-transform duration-300" 
+          loading="lazy"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-80"></div>
         <div className="absolute bottom-0 left-0 p-6">
-          <h3 className="font-heading text-2xl text-white shadow-lg">{room.title}</h3>
+          <h3 className="font-heading text-2xl text-white drop-shadow-lg">{room.title}</h3>
         </div>
       </div>
     </div>
@@ -24,6 +31,10 @@ const RoomCard: React.FC<RoomCardProps> = ({ room }) => {
 
 const RoomsCarousel: React.FC<{ rooms: Room[] }> = ({ rooms }) => {
     const scrollRef = useRef<HTMLDivElement>(null);
+    
+    // Preload room images for better performance
+    const roomImages = rooms.map(room => room.image);
+    useImagePreloader(roomImages);
 
     const scroll = (direction: 'left' | 'right') => {
         if (scrollRef.current) {
