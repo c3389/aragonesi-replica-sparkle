@@ -4,13 +4,17 @@ import AnimatedElement from './AnimatedElement';
 import OptimizedImage from '../src/components/OptimizedImage';
 import { useImagePreloader } from '../src/hooks/useImagePreloader';
 
-const GardenShowcase: React.FC = () => {
+interface GardenShowcaseProps {
+    id?: string;
+}
+
+const GardenShowcase: React.FC<GardenShowcaseProps> = ({ id }) => {
     // Preload garden images for better performance
     const gardenImages = GARDEN_IMAGES.map(item => item.src);
     useImagePreloader(gardenImages);
     
     return (
-        <section className="py-20 md:py-28 bg-[#FAF7F1] overflow-hidden">
+        <section id={id} className="py-20 md:py-28 bg-[#FAF7F1] overflow-hidden">
              <div className="container mx-auto px-6 text-center mb-12">
                 <AnimatedElement>
                     <h2 className="text-4xl md:text-5xl text-[#1a4531]">Garden Space</h2>

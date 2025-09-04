@@ -63,9 +63,13 @@ const RoomsCarousel: React.FC<{ rooms: Room[] }> = ({ rooms }) => {
 };
 
 
-const Rooms: React.FC = () => {
+interface RoomsProps {
+    id?: string;
+}
+
+const Rooms: React.FC<RoomsProps> = ({ id }) => {
   return (
-    <section className="py-20 md:py-28 bg-[#EEDFEA] overflow-hidden">
+    <section id={id} className="py-20 md:py-28 bg-[#EEDFEA] overflow-hidden">
       <div className="container mx-auto px-6 text-center">
           <div className="max-w-2xl mx-auto mb-12">
             <AnimatedElement>

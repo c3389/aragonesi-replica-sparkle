@@ -1,9 +1,13 @@
 import React from 'react';
 import AnimatedElement from './AnimatedElement';
 
-const Welcome: React.FC = () => {
+interface WelcomeProps {
+    id?: string;
+}
+
+const Welcome: React.FC<WelcomeProps> = ({ id }) => {
     return (
-        <section className="py-16 md:py-24 bg-background">
+        <section id={id} className="py-16 md:py-24 bg-background">
             <div className="container mx-auto px-6 text-center">
                 <AnimatedElement>
                     <h2 className="text-3xl md:text-4xl font-heading text-secondary mb-6">

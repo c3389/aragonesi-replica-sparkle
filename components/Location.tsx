@@ -1,9 +1,13 @@
 import React from 'react';
 import AnimatedElement from './AnimatedElement';
 
-const Location: React.FC = () => {
+interface LocationProps {
+    id?: string;
+}
+
+const Location: React.FC<LocationProps> = ({ id }) => {
     return (
-        <section className="py-20 md:py-28 bg-[#FAF7F1]">
+        <section id={id} className="py-20 md:py-28 bg-[#FAF7F1]">
             <div className="container mx-auto px-6">
                 <div className="text-center mb-12">
                     <AnimatedElement>

@@ -33,9 +33,13 @@ const Header: React.FC = () => {
         setIsMenuOpen(false);
         const element = document.querySelector(href);
         if (element) {
-            element.scrollIntoView({ 
-                behavior: 'smooth',
-                block: 'start'
+            const headerHeight = 80; // altezza header per offset
+            const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+            const offsetPosition = elementPosition - headerHeight;
+            
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
             });
         }
     };

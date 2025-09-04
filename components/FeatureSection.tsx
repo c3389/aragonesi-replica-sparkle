@@ -1,9 +1,13 @@
 import React from 'react';
 import AnimatedElement from './AnimatedElement';
 
-const FeatureSection: React.FC = () => {
+interface FeatureSectionProps {
+    id?: string;
+}
+
+const FeatureSection: React.FC<FeatureSectionProps> = ({ id }) => {
     return (
-        <section className="py-20 md:py-28 bg-[#ADC4BB] overflow-hidden">
+        <section id={id} className="py-20 md:py-28 bg-[#ADC4BB] overflow-hidden">
             <div className="container mx-auto px-6">
                 <div className="relative flex flex-col lg:flex-row items-center justify-center lg:h-[700px]">
                     
