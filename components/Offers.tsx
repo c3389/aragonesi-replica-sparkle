@@ -60,7 +60,7 @@ const Rooms: React.FC = () => {
             <p className="text-base text-gray-600">
               Suddivise in varie tipologie, le nostre camere soddisfano le esigenze di coppie in cerca di un soggiorno romantico, di famiglie e gruppi di amici, offrendo diverse <strong>soluzioni</strong> e <strong>servizi</strong> a seconda delle necessità.
             </p>
-            <a href="#" className="inline-block mt-6 bg-secondary text-white px-8 py-3 rounded-md font-body text-sm font-semibold hover:bg-text-secondary transition-colors">
+            <a href="#" className="inline-block mt-6 bg-[#335b48] text-white px-8 py-3 rounded-md font-body text-sm font-semibold hover:bg-[#1a4531] transition-colors">
                 Scopri
             </a>
           </div>

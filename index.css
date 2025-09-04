@@ -3,14 +3,14 @@
   /* Color System - HSL for better theming */
   --primary: 26 72% 57%;           /* Warm primary color */
   --primary-dark: 26 72% 45%;      /* Darker primary variant */
-  --secondary: 190 85% 45%;        /* Sea blue */
-  --secondary-light: 190 70% 65%;  /* Light sea blue */
+  --secondary: 200 70% 40%;        /* Ocean blue */
+  --secondary-light: 200 60% 55%;  /* Light ocean blue */
   --accent: 26 85% 65%;            /* Accent color */
   
   /* Neutral Colors */
   --background: 43 46% 94%;        /* #FAF7F1 */
   --text-primary: 22 4% 37%;       /* #5E5D5C */
-  --text-secondary: 190 90% 30%;   /* Dark sea blue */
+  --text-secondary: 200 80% 30%;   /* Dark ocean blue */
   --text-light: 43 20% 85%;        /* Light text */
   
   /* Spacing System */
