@@ -7,7 +7,7 @@ interface FeatureSectionProps {
 
 const FeatureSection: React.FC<FeatureSectionProps> = ({ id }) => {
     return (
-        <section id={id} className="py-20 md:py-28 bg-[#ADC4BB] overflow-hidden">
+        <section id={id} className="py-20 md:py-28 bg-secondary-light overflow-hidden">
             <div className="container mx-auto px-6">
                 <div className="relative flex flex-col lg:flex-row items-center justify-center lg:h-[700px]">
                     
@@ -38,7 +38,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({ id }) => {
                                 </p>
                             </AnimatedElement>
                              <AnimatedElement delay={200}>
-                                <a href="#" className="inline-block mt-6 bg-[#335b48] text-white px-8 py-3 rounded-md font-body text-sm font-semibold hover:bg-[#1a4531] transition-colors">
+                                <a href="#" className="inline-block mt-6 bg-secondary text-white px-8 py-3 rounded-md font-body text-sm font-semibold hover:bg-text-secondary transition-colors">
                                     Scopri
                                 </a>
                             </AnimatedElement>

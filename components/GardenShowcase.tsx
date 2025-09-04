@@ -17,10 +17,10 @@ const GardenShowcase: React.FC<GardenShowcaseProps> = ({ id }) => {
         <section id={id} className="py-20 md:py-28 bg-[#FAF7F1] overflow-hidden">
              <div className="container mx-auto px-6 text-center mb-12">
                 <AnimatedElement>
-                    <h2 className="text-4xl md:text-5xl text-[#1a4531]">Garden Space</h2>
+                    <h2 className="text-4xl md:text-5xl text-text-secondary">Garden Space</h2>
                 </AnimatedElement>
                 <AnimatedElement delay={150}>
-                    <h3 className="text-2xl md:text-3xl text-[#3d6f58] mt-2 mb-4">Eventi da ricordare</h3>
+                    <h3 className="text-2xl md:text-3xl text-secondary mt-2 mb-4">Eventi da ricordare</h3>
                 </AnimatedElement>
                 <AnimatedElement delay={300}>
                     <p className="max-w-3xl mx-auto text-base text-gray-600">
@@ -28,7 +28,7 @@ const GardenShowcase: React.FC<GardenShowcaseProps> = ({ id }) => {
                     </p>
                 </AnimatedElement>
                  <AnimatedElement delay={450}>
-                    <a href="#" className="inline-block mt-6 bg-[#335b48] text-white px-8 py-3 rounded-md font-body text-sm font-semibold hover:bg-[#1a4531] transition-colors">
+                    <a href="#" className="inline-block mt-6 bg-secondary text-white px-8 py-3 rounded-md font-body text-sm font-semibold hover:bg-text-secondary transition-colors">
                         Scopri
                     </a>
                 </AnimatedElement>

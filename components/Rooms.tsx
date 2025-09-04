@@ -73,10 +73,10 @@ const Rooms: React.FC<RoomsProps> = ({ id }) => {
       <div className="container mx-auto px-6 text-center">
           <div className="max-w-2xl mx-auto mb-12">
             <AnimatedElement>
-                <h2 className="text-4xl md:text-5xl text-[#1a4531] mt-2">Camere & Suite</h2>
+                <h2 className="text-4xl md:text-5xl text-text-secondary mt-2">Camere & Suite</h2>
             </AnimatedElement>
             <AnimatedElement delay={150}>
-                <h3 className="text-2xl md:text-3xl text-[#3d6f58] mt-2 mb-4">Luxury e Comfort</h3>
+                <h3 className="text-2xl md:text-3xl text-secondary mt-2 mb-4">Luxury e Comfort</h3>
             </AnimatedElement>
             <AnimatedElement delay={300}>
                 <p className="text-base text-gray-600">
@@ -84,7 +84,7 @@ const Rooms: React.FC<RoomsProps> = ({ id }) => {
                 </p>
             </AnimatedElement>
             <AnimatedElement delay={450}>
-                <a href="#" className="inline-block mt-6 bg-[#335b48] text-white px-8 py-3 rounded-md font-body text-sm font-semibold hover:bg-[#1a4531] transition-colors">
+                <a href="#" className="inline-block mt-6 bg-secondary text-white px-8 py-3 rounded-md font-body text-sm font-semibold hover:bg-text-secondary transition-colors">
                     Scopri
                 </a>
             </AnimatedElement>

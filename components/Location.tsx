@@ -11,13 +11,13 @@ const Location: React.FC<LocationProps> = ({ id }) => {
             <div className="container mx-auto px-6">
                 <div className="text-center mb-12">
                     <AnimatedElement>
-                        <h2 className="text-4xl md:text-5xl text-[#1a4531]">
+                        <h2 className="text-4xl md:text-5xl text-text-secondary">
                             Vieni a trovarci, nel cuore di Ischia.
                         </h2>
                     </AnimatedElement>
                     <AnimatedElement delay={200}>
                         <div className="mt-8">
-                            <a href="https://maps.app.goo.gl/vTuVNfQJz8HteWZd7" target="_blank" rel="noopener noreferrer" className="inline-block border border-[#335b48] text-[#335b48] px-8 py-3 rounded-md font-body text-sm font-semibold hover:bg-[#335b48] hover:text-white transition-colors">
+                            <a href="https://maps.app.goo.gl/vTuVNfQJz8HteWZd7" target="_blank" rel="noopener noreferrer" className="inline-block border border-secondary text-secondary px-8 py-3 rounded-md font-body text-sm font-semibold hover:bg-secondary hover:text-white transition-colors">
                                 Scopri
                             </a>
                         </div>

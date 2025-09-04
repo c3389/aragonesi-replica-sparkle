@@ -5,7 +5,7 @@ const Footer: React.FC = () => {
     const footerLinks = ['Contatti', 'Dati Societari', 'Privacy', 'Cookie'];
 
     return (
-        <footer className="bg-[#1a4531] text-[#FAF7F1]">
+        <footer className="bg-text-secondary text-background">
             <div className="container mx-auto px-6 py-16 text-center">
                 <div className="flex justify-center mb-8">
                     <a href="#" className="text-3xl font-heading font-semibold tracking-wide">Relais Corte degli Aragonesi</a>

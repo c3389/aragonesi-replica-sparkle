@@ -16,9 +16,9 @@ const Header: React.FC = () => {
         isScrolled || isMenuOpen ? 'bg-white shadow-md' : 'bg-transparent'
     }`;
     const textClasses = isScrolled || isMenuOpen ? 'text-gray-800' : 'text-white';
-    const hoverTextClasses = isScrolled || isMenuOpen ? 'hover:text-[#3D6F58]' : 'hover:text-gray-200';
+    const hoverTextClasses = isScrolled || isMenuOpen ? 'hover:text-secondary' : 'hover:text-gray-200';
     const buttonClasses = isScrolled || isMenuOpen 
-        ? 'bg-[#335b48] text-white hover:bg-[#1a4531]' 
+        ? 'bg-secondary text-white hover:bg-text-secondary' 
         : 'bg-white/20 backdrop-blur-sm text-white hover:bg-white/30';
     
     const navLinks = [
@@ -82,12 +82,12 @@ const Header: React.FC = () => {
                             <button 
                                 key={link.name} 
                                 onClick={() => handleLinkClick(link.href)} 
-                                className="text-gray-800 hover:text-[#3D6F58] py-2 text-center cursor-pointer"
+                                className="text-gray-800 hover:text-secondary py-2 text-center cursor-pointer"
                             >
                                 {link.name}
                             </button>
                          ))}
-                         <button className="bg-[#335b48] text-white hover:bg-[#1a4531] text-sm font-medium px-5 py-3 rounded-md transition-colors duration-300">
+                         <button className="bg-secondary text-white hover:bg-text-secondary text-sm font-medium px-5 py-3 rounded-md transition-colors duration-300">
                             Prenota
                         </button>
                     </nav>
