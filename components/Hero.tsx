@@ -40,10 +40,6 @@ const Hero: React.FC = () => {
                     </div>
                 ))}
             </div>
-            {/* Debug indicator */}
-            <div className="absolute top-4 right-4 bg-black/50 text-white px-3 py-1 rounded">
-                {currentIndex + 1} / {HERO_IMAGES.length}
-            </div>
         </section>
     );
 };

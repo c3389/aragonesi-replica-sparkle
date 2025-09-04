@@ -69,7 +69,7 @@ interface RoomsProps {
 
 const Rooms: React.FC<RoomsProps> = ({ id }) => {
   return (
-    <section id={id} className="py-20 md:py-28 bg-[#EEDFEA] overflow-hidden">
+    <section id={id} className="py-20 md:py-28 bg-gradient-to-br from-secondary-light/20 to-secondary/10 overflow-hidden">
       <div className="container mx-auto px-6 text-center">
           <div className="max-w-2xl mx-auto mb-12">
             <AnimatedElement>
