@@ -21,7 +21,24 @@ const Header: React.FC = () => {
         ? 'bg-[#335b48] text-white hover:bg-[#1a4531]' 
         : 'bg-white/20 backdrop-blur-sm text-white hover:bg-white/30';
     
-    const navLinks = ["Relais", "Servizi", "Camere & Suite", "Dove Siamo", "Offerte"];
+    const navLinks = [
+        { name: "Il Relais", href: "#welcome" },
+        { name: "Servizi", href: "#servizi" },
+        { name: "Camere & Suite", href: "#camere" },
+        { name: "Giardino", href: "#giardino" },
+        { name: "Dove Siamo", href: "#location" }
+    ];
+
+    const handleLinkClick = (href: string) => {
+        setIsMenuOpen(false);
+        const element = document.querySelector(href);
+        if (element) {
+            element.scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    };
 
     return (
         <header className={headerClasses}>
@@ -31,7 +48,13 @@ const Header: React.FC = () => {
                 </div>
                 <nav className="hidden lg:flex items-center space-x-6">
                     {navLinks.map(link => (
-                        <a key={link} href="#" className={`text-sm font-medium transition-colors ${textClasses} ${hoverTextClasses}`}>{link}</a>
+                        <button 
+                            key={link.name} 
+                            onClick={() => handleLinkClick(link.href)} 
+                            className={`text-sm font-medium transition-colors cursor-pointer ${textClasses} ${hoverTextClasses}`}
+                        >
+                            {link.name}
+                        </button>
                     ))}
                 </nav>
                 <div className="flex items-center space-x-4">
@@ -39,10 +62,10 @@ const Header: React.FC = () => {
                         Prenota
                     </button>
                     <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="lg:hidden p-2 rounded-md focus:outline-none">
-                        <div className="w-6 h-6 flex flex-col justify-around">
-                            <span className={`block w-6 h-0.5 ${isScrolled || isMenuOpen ? 'bg-gray-800' : 'bg-white'} transition-transform duration-300 ${isMenuOpen ? 'transform rotate-45 translate-y-[5px]' : ''}`}></span>
-                            <span className={`block w-6 h-0.5 ${isScrolled || isMenuOpen ? 'bg-gray-800' : 'bg-white'} transition-opacity duration-300 ${isMenuOpen ? 'opacity-0' : ''}`}></span>
-                            <span className={`block w-6 h-0.5 ${isScrolled || isMenuOpen ? 'bg-gray-800' : 'bg-white'} transition-transform duration-300 ${isMenuOpen ? 'transform -rotate-45 -translate-y-[5px]' : ''}`}></span>
+                        <div className="w-6 h-6 relative flex flex-col justify-center space-y-1">
+                            <span className={`block w-6 h-0.5 ${isScrolled || isMenuOpen ? 'bg-gray-800' : 'bg-white'} transition-all duration-300 origin-center ${isMenuOpen ? 'rotate-45 absolute' : ''}`}></span>
+                            <span className={`block w-6 h-0.5 ${isScrolled || isMenuOpen ? 'bg-gray-800' : 'bg-white'} transition-all duration-300 ${isMenuOpen ? 'opacity-0' : ''}`}></span>
+                            <span className={`block w-6 h-0.5 ${isScrolled || isMenuOpen ? 'bg-gray-800' : 'bg-white'} transition-all duration-300 origin-center ${isMenuOpen ? '-rotate-45 absolute' : ''}`}></span>
                         </div>
                     </button>
                 </div>
@@ -52,7 +75,13 @@ const Header: React.FC = () => {
                 <div className="bg-white px-6 pb-6 pt-2">
                     <nav className="flex flex-col space-y-4">
                          {navLinks.map(link => (
-                            <a key={link} href="#" className="text-gray-800 hover:text-[#3D6F58] py-2 text-center">{link}</a>
+                            <button 
+                                key={link.name} 
+                                onClick={() => handleLinkClick(link.href)} 
+                                className="text-gray-800 hover:text-[#3D6F58] py-2 text-center cursor-pointer"
+                            >
+                                {link.name}
+                            </button>
                          ))}
                          <button className="bg-[#335b48] text-white hover:bg-[#1a4531] text-sm font-medium px-5 py-3 rounded-md transition-colors duration-300">
                             Prenota

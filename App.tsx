@@ -15,12 +15,12 @@ const App: React.FC = () => {
       <Header />
       <main>
         <Hero />
-        <Welcome />
-        <FeatureSection />
-        <Rooms />
-        <GardenShowcase />
+        <Welcome id="welcome" />
+        <FeatureSection id="servizi" />
+        <Rooms id="camere" />
+        <GardenShowcase id="giardino" />
         <ParallaxSection />
-        <Location />
+        <Location id="location" />
       </main>
       <Footer />
     </div>
