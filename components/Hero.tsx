@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import OptimizedImage from '../src/components/OptimizedImage';
 import { HERO_IMAGES } from '../constants';
-import { Menu } from 'lucide-react';
 import { useImagePreloader } from '../src/hooks/useImagePreloader';
 
 const Hero: React.FC = () => {
@@ -21,7 +20,7 @@ const Hero: React.FC = () => {
 
     return (
         <section className="relative h-screen overflow-hidden">
-            {/* Background Images */}
+            {/* Background Images Gallery */}
             <div className="absolute inset-0 w-full h-full">
                 {HERO_IMAGES.map((src, index) => (
                     <OptimizedImage
@@ -34,16 +33,6 @@ const Hero: React.FC = () => {
                         }`}
                     />
                 ))}
-            </div>
-            
-            {/* Top Navigation Bar */}
-            <div className="absolute top-0 left-0 right-0 z-10 flex justify-between items-center p-6 md:p-8">
-                <h1 className="text-xl md:text-2xl font-heading text-white drop-shadow-lg">
-                    Relais Corte degli Aragonesi
-                </h1>
-                <button className="text-white hover:text-white/80 transition-colors duration-200">
-                    <Menu size={28} className="drop-shadow-lg" />
-                </button>
             </div>
         </section>
     );
