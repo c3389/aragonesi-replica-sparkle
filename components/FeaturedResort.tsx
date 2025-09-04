@@ -30,7 +30,7 @@ const FeatureSection: React.FC = () => {
                                 <br/><br/>
                                 Ogni camera del nostro relais è pensata per offrire un <strong>soggiorno all’insegna del benessere totale</strong>, in ambienti curati nei minimi dettagli, dove il design raffinato si unisce alla funzionalità dei servizi.
                             </p>
-                             <a href="#" className="inline-block mt-6 bg-[#335b48] text-white px-8 py-3 rounded-md font-body text-sm font-semibold hover:bg-[#1a4531] transition-colors">
+                             <a href="#" className="inline-block bg-secondary text-white px-8 py-3 rounded-md font-body text-sm font-semibold hover:bg-text-secondary transition-colors">
                                 Scopri
                             </a>
                         </div>

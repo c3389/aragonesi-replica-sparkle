@@ -17,7 +17,7 @@ const Location: React.FC<LocationProps> = ({ id }) => {
                     </AnimatedElement>
                     <AnimatedElement delay={200}>
                         <div className="mt-8">
-                            <a href="https://maps.app.goo.gl/vTuVNfQJz8HteWZd7" target="_blank" rel="noopener noreferrer" className="inline-block border border-secondary text-secondary px-8 py-3 rounded-md font-body text-sm font-semibold hover:bg-secondary hover:text-white transition-colors">
+                            <a href="https://maps.app.goo.gl/vTuVNfQJz8HteWZd7" target="_blank" rel="noopener noreferrer" className="inline-block bg-secondary text-white px-8 py-3 rounded-md font-body text-sm font-semibold hover:bg-text-secondary transition-colors">
                                 Scopri
                             </a>
                         </div>

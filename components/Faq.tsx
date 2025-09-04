@@ -9,7 +9,7 @@ const Location: React.FC = () => {
                         Vieni a trovarci, nel cuore di Ischia.
                     </h2>
                     <div className="mt-8">
-                        <a href="#" className="inline-block border border-[#335b48] text-[#335b48] px-8 py-3 rounded-md font-body text-sm font-semibold hover:bg-[#335b48] hover:text-white transition-colors">
+                        <a href="#" className="inline-block bg-secondary text-white px-8 py-3 rounded-md font-body text-sm font-semibold hover:bg-text-secondary transition-colors">
                             Scopri
                         </a>
                     </div>
